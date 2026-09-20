@@ -44,16 +44,16 @@ window.CONTENT = {
 
   // Coordonnées et infos de la destination finale
   finalDestination: {
-    name: "Bar 73",
-    address: "138 avenue Parmentier, 75011 Paris",
-    coords: { lat: 48.8691, lng: 2.3718 },
-    successMessage: "Ce sont les bonnes coordonnées ! Rendez-vous au Bar 73, 138 avenue Parmentier. Je vous attends avec le champagne au frais 🥂🎉"
+    name: "La Fontaine Charonne",
+    address: "1 rue de Charonne, 75011 Paris",
+    coords: { lat: 48.8521, lng: 2.3738 },
+    successMessage: "Ce sont les bonnes coordonnées ! Rendez-vous à La Fontaine Charonne, 1 rue de Charonne. Je vous attends avec le champagne au frais 🥂🎉"
   },
 
   // Chaque position (A à H) attend un chiffre précis.
   // C'est ce qui permet à des équipes de collecter les fragments
   // dans n'importe quel ordre et de reconstituer la même coordonnée.
-  expectedDigits: { A: "8", B: "6", C: "9", D: "1", E: "3", F: "7", G: "1", H: "8" },
+  expectedDigits: { A: "8", B: "5", C: "2", D: "1", E: "3", F: "7", G: "3", H: "8" },
 
   // -----------------------------------------------------------
   // LIEUX
@@ -94,13 +94,13 @@ window.CONTENT = {
       fragments: [
         {
           position: "B",
-          prompt: "Comptez les passerelles qui permettent aux piétons de sauter d'une rive à l'autre, sans jamais mouiller leurs pieds.",
-          answer: "6"
+          prompt: "Le canal ne se résume pas à ses écluses : il est ponctué de bassins qui portent chacun un nom — des Morts, du Combat, Louis-Blanc, des Récollets, du Marais. Combien en compte-t-on au total ?",
+          answer: "5"
         },
         {
           position: "C",
-          prompt: "Ce sont elles qui font monter et descendre les bateaux, marche après marche, du niveau de la Seine à celui de la Villette. Combien le canal en compte-t-il ?",
-          answer: "9"
+          prompt: "Pour laisser passer les bateaux sans gêner la circulation, certains ponts du canal ne se lèvent pas : ils pivotent. Combien de ponts tournants le canal compte-t-il ?",
+          answer: "2"
         }
       ]
     },
@@ -163,7 +163,7 @@ window.CONTENT = {
 
     "atelier-lumieres": {
       name: "Atelier des Lumières",
-      coords: { lat: 48.8619, lng: 2.3769 },
+      coords: { lat: 48.8616, lng: 2.3808 },
       riddleGo: `Je suis né grâce au métal.<br><br>
         Pendant des décennies, on y forgeait machines et pièces dans la chaleur des fourneaux.
         Aujourd'hui, mes murs de fonte n'accueillent plus que des images, des couleurs et de la lumière.<br><br>
@@ -172,11 +172,14 @@ window.CONTENT = {
         différentes vies industrielles, le bâtiment s'est métamorphosé en cathédrale d'images et de lumière.`,
       fragments: [
         {
-          position: "G-H",
-          prompt: "Ce lieu a rouvert ses portes plusieurs printemps après le tournant du nouveau millénaire. Comptez ces printemps un à un, depuis l'an 2000 jusqu'à sa renaissance en atelier de lumière : c'est votre clé, à deux chiffres.",
-          answer: "18",
-          // Un fragment à 2 chiffres se répartit sur 2 positions.
-          multiPosition: ["G", "H"]
+          position: "G",
+          prompt: "Ce lieu joue avec l'espace autant qu'avec la lumière : ses images recouvrent une surface de plusieurs milliers de mètres carrés — environ 3 300. Ne gardez que le premier chiffre.",
+          answer: "3"
+        },
+        {
+          position: "H",
+          prompt: "Après sa renaissance en fonderie de lumière, cette ancienne usine a ouvert ses portes au public en 2018. Ne gardez que le dernier chiffre de cette année.",
+          answer: "8"
         }
       ]
     }
