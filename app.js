@@ -1,4 +1,4 @@
-/* ============================================================
+* ============================================================
    LOGIQUE DE L'APPLICATION — ne pas éditer sauf pour changer
    le fonctionnement (pas les textes : ça, c'est content.js)
    ============================================================ */
@@ -265,7 +265,7 @@ function checkLocation(team, state, loc) {
     (pos) => {
       const here = { lat: pos.coords.latitude, lng: pos.coords.longitude };
       const dist = haversineMeters(here, loc.coords);
-      const radius = C.defaultRadius || 200;
+      const radius = loc.radius || C.defaultRadius || 200;
       if (dist > radius) {
         geoError = `Vous êtes trop loin du lieu, approchez-vous encore un peu 🧭 (environ ${Math.round(dist)} m à faire)`;
         render();
